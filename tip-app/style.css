@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Muli';
+}
+
+html {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: wheat;
+}
+
+header {
+  text-align: center;
+  color: #318f66;
+  background-color: #cef5e4;
+  font-size: 1.2rem;
+  padding: 1.5rem;
+  margin-bottom: 0.5rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f8fffc;
+  border: solid 1px #318f66;
+  border-radius: 20px;
+  height: 500px;
+  width: 300px;
+  overflow: hidden;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.label {
+  color: grey;
+  padding: 0.7rem 0 0.5rem;
+}
+
+main > div {
+  display: flex;
+  flex-direction: column;
+}
+main > div:not(:last-of-type) {
+  margin: 0 3rem;
+}
+main > div:last-of-type {
+  margin: 1rem 1.5rem;
+  background-color: #cef5e4;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+main > div:last-of-type > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main > div:last-of-type > div:last-of-type {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+main > div:last-of-type > div:last-of-type > div {
+  display: flex;
+  flex-direction: column;
+}
+
+main > div:first-of-type {
+  position: relative;
+}
+main > div:first-of-type .dollar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  font-size: 1.5rem;
+  color: #3d8364;
+}
+
+.total,
+.bill,
+.tip {
+  color: #3d8364;
+  font-size: 1.2rem;
+  padding-bottom: 5px;
+}
+
+.total {
+  font-size: 1.7rem;
+}
+
+.amt {
+  border: none;
+  outline: none;
+  border-bottom: solid 1px grey;
+  font-size: 1.5rem;
+  padding-left: 1.2rem;
+  background-color: transparent;
+  color: #3d8364;
+}
+
+.tips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: relative;
+}
+
+.tips > button {
+  background-color: white;
+  display: inline-block;
+  outline: none;
+  color: #3d8364;
+  padding: 5px 10px;
+  margin: 4px 2px;
+  border: solid 1px #318f66;
+  border-radius: 17px;
+  box-shadow: 3px 4px 10px #318f66;
+  cursor: pointer;
+}
+
+.tips > input {
+  border: none;
+  outline: none;
+  border-bottom: solid 1px grey;
+  font-size: 1.5rem;
+  width: 100px;
+  background-color: transparent;
+  color: #3d8364;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: none;
+}
+
+.split > div {
+  display: flex;
+  margin: 0 auto;
+  color: #3d8364;
+}
+.split > div > button {
+  display: flex;
+  font-size: 1.4rem;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  color: #3d8364;
+}
+.split > div > span {
+  font-size: 1.5rem;
+  margin: 0 5px;
+  font-weight: bold;
+}
